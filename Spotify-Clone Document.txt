@@ -1,0 +1,61 @@
+							SPOTIFY CLONE
+-Made Login.js file
+	-use rfce an EF7 command
+	-Add <Login/> to App.js
+	-Create Login.css
+	-import './Login.css' into Login.js
+	-do <img src="https://getheavy.com/wp-content/uploads/2019/12/spotify2019-830x350.jpg" alt=""/>
+	to get the spotify logo
+	-add a <a> tag saying "LOGIN WITH SPOTIFY"
+
+	-apply some css to the logo and the <a> tag
+		.login{
+		    display:grid;
+		    place-items:center;
+		    height:100vh;
+		    background-color: black;
+		}
+		.login img{
+ 			   width:100%;
+		}
+		.login a{
+    			padding:20px;
+    			background-color: #1db854;
+    			border-radius: 99px;
+    			font-weight: 800;
+    			color:white;
+    			text-decoration:none;
+		}
+
+	-Create a spotify.js file- (we wont use this as a component, but we will use this for redirecting stuffs)
+	-ADDING ENDPOINT TO THE <a> TAG
+	// https://developer.spotify.com/documentation/web-playback-sdk/quick-start/# -this is for the documentation
+
+	export const authEndpoint = "https://accounts.spotify.com/authorize";
+    	//this Endpoint will direct us to Spotify Login Page on clicking the Login Button
+
+	const redirectUri= "http://localhost:3000";
+    	//after logining in, it redirects us to our localhost
+	
+	-just add the client ID variable
+	const clientId="8b626eda5bc94b3#b5a3826f3f05cd85";//make your own client id - Ive altered it
+
+	-MAKE SCOPES
+	//scopes are written so that the user is not allowed to delete any stuff from out websites
+
+	-create the Login URL-inside of spotify.js
+	
+	-after creating the LoginURL- put this url onto the <a href={LoginURL}>LOGIN WITH SPOTIFY</a> on the Login.js
+	-here we cant just directly write LoginURL- we need to import it into the Login.js File- by 
+						import {LoginURL} from "./spotify"
+
+	-Now we want to get that Token from the URL
+		we do that inside of spotify.js
+		just byhart that code lmao!
+
+	-Now that we got the token inside out export const variable called getTokenFromUrl
+		we go back to App.js to use it
+	-now how do we load it whenever we get the login page filled and redirected back
+		-we want to run a piece of code, when a component loads ! How do we do that?!
+		-we make use of UseEffect Hook;
+	
