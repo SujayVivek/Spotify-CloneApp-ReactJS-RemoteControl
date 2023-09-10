@@ -31,7 +31,7 @@ const clientId="8b626eda5bc94b35b5a3826f3f05cd85";
                 let parts= item.split('=');
                 initial[parts[0]]=decodeURIComponent(parts[1]);//dont know what this does tho
 
-                return initial;
+                return initial; 
             },{});
     }
 

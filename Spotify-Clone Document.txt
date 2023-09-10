@@ -57,5 +57,21 @@
 		we go back to App.js to use it
 	-now how do we load it whenever we get the login page filled and redirected back
 		-we want to run a piece of code, when a component loads ! How do we do that?!
-		-we make use of UseEffect Hook;
-	
+		-we make use of UseEffect Hook;.
+	-now we go to the App.js file and try to get that token using the UseEffect Hook
+
+	-once the code in UseEffect is completely written. Now we have the token inside of a variable named token
+	-This..now to interact with all the Spotify songs and stuff- we go to the terminal and write the command
+					npm i spotify-web-api-js
+
+	and we import SpotifyWebApi from "spotify-web-api-js"
+
+	then we create an object called spotify-- const spotify=new SpotifyWebApi();
+	-Now we write spotify.setAccessToken(_token) inside the UseEffect 	
+
+	Now to fetch items from different files..eg:- fetching songs, fetching playlists, fetching items easily and quickly,
+	we use --- REACT CONTEXT API ---
+							Is is similar to REDUX and FLUX
+
+	Now we create a file called DataLayer.js
+	-go to index.html and enclose <App.js/> between <DataLayer.js> and <DataLayer.js/>
